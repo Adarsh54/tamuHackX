@@ -1,10 +1,3 @@
-# Slide 1
-Go to [Second Page](/slide_2) for more information.
-
-I am great
-
-<|{data}|chart|type=pie|values=Area|labels=Country|>
-
 <div style="width: 100%; height: 100%; position: relative; background: linear-gradient(180deg, rgba(220.07, 247.97, 215.53, 0) 0%, rgba(220.07, 247.97, 215.53, 0.31) 14%, #DCF8D8 100%)">
     <div style="width: 476px; height: 640px; left: 490px; top: 208px; position: absolute; background: #678B56"></div>
     <div style="width: 476px; height: 640px; left: 474px; top: 187px; position: absolute; background: white; box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25)"></div>

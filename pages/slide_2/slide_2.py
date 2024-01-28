@@ -4,7 +4,6 @@ Page content is imported from the slide_2.md file.
 
 Please refer to https://docs.taipy.io/en/latest/manuals/gui/pages for more details.
 """
-
 from taipy.gui import Html
 import pandas as pd
 
@@ -12,6 +11,7 @@ content = {}
 
 def loadCsvFile(state):
     print(pd.read_csv(state.content))
+
 
 
 slide_2 = Html("""
