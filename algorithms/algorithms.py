@@ -36,8 +36,8 @@ totalRevenue = 0
 
 foodDelivery = [0,0.0]
 
-def fillInDataFromCsv():
-    file_name = 'monthlyexpense.csv'
+def fillInDataFromCsv(fileName): #monthlyexpense is the planned
+    file_name = fileName
 
     with open(file_name, newline='') as csvfile:
         csvreader = csv.reader(csvfile)
