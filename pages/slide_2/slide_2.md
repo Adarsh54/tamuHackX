@@ -1,3 +1,4 @@
+
 <div style="width: 100%; height: 100%; position: relative; background: white">
     <div style="width: 1909px; height: 1231px; left: -235px; top: 0px; position: absolute; background: #2C909D">
         <div style="width: 981px; height: 154px; left: 471px; top: 108px; position: absolute; color: white; font-size: 128px; font-family: Sansita; font-weight: 700; word-wrap: break-word">Finance Wrapped</div>
@@ -29,4 +30,6 @@
         </div>
         <div style="width: 464px; height: 1px; left: 0px; top: 68px; position: absolute; background: #EBEFF2"></div>
     </div>
+
 </div>
+

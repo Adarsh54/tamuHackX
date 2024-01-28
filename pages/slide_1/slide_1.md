@@ -28,7 +28,7 @@ I am great
     <div style="left: 649px; top: 278px; position: absolute; color: black; font-size: 45px; font-family: Inter; font-weight: 900; word-wrap: break-word">Login</div>
     <div style="width: 424px; height: 56px; left: 508px; top: 451px; position: absolute">
         <div style="width: 424px; height: 56px; left: 0px; top: 0px; position: absolute; background: #DCF8D8"></div>
-        <div style="left: 32px; top: 16px; position: absolute; color: rgba(0, 0, 0, 0.50); font-size: 20px; font-family: Inter; font-weight: 300; word-wrap: break-word">Username</div>
+        <div style="left: 32px; top: 16px; position: absolute; color: rgba(0, 0, 0, 0.50); font-size: 20px; font-family: Inter; font-weight: 300; word-wrap: break-word">{username}</div>
         <div style="width: 424px; height: 0px; left: 0px; top: 56px; position: absolute; border: 1px rgba(0, 0, 0, 0.60) solid"></div>
     </div>
     <div style="width: 424px; height: 56px; left: 508px; top: 537px; position: absolute">
