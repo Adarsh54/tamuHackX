@@ -15,12 +15,12 @@ from openai import OpenAI
 
 pages = {
     "/": root_page,
-    "slide_1": slide_1,
-	"slide_2": slide_2,
-    "slide_3": slide_3,
-	"slide_4": slide_4,
-    "slide_5": slide_5,
-    "slide_6": slide_6
+    "LOGIN": slide_1,
+	"UPLOAD": slide_2,
+    "REVENUE": slide_3,
+	"DINING": slide_4,
+    "DEBT": slide_5,
+    "SUMMARY": slide_6
 }
 
 

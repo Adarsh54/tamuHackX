@@ -6,16 +6,10 @@ Please refer to https://docs.taipy.io/en/latest/manuals/gui/pages for more detai
 """
 
 from taipy.gui import Markdown, State
+import pandas as pd
 
-# percentages=[(1852,50.83), (1856,45.29), ..., (2016,46.09), (2020,51.31)]
-# data = pandas.DataFrame(percentages, columns= ["Year", "%"])
-
-# path = {}
-totalRevenue = State.revenueTotal
-print(str(totalRevenue) + " was the total revenue you made!")
-
-
-# def loadCsvFile(state):
-#     print(pd.read_csv(state.path))
+your_total = State.diningOut
+percentages=[("US Average Amount of Money Spent on Food per Month",166.00), ("How Much Money You Spent on Food this Month",your_total)]
+data = pd.DataFrame(percentages, columns= ["Food Spending", "Money Spent ($)"])
 
 slide_4 = Markdown("pages/slide_4/slide_4.md")

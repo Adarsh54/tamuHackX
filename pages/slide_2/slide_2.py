@@ -16,7 +16,7 @@ def loadCsvFile(state):
 #Begin shenanigans
 prompt = "YOU ARE ONLY TO RETURN AN INTEGER AS AN ANSWER. THIS IS URGENT. ONLY AN INTEGER. Hello ChatGPT, your task is to analyze a financial statement and categorize it into one of 13 predefined categories. The categories are: 0: Housing, 1: Utilities, 2: Groceries, 3: Dining Out, 4: Transportation, 5: Healthcare, 6: Insurance, 7: Personal Spending, 8: Savings and Investments, 9: Debt Payments, 10: Subscriptions and Memberships, 11: Miscellaneous. UberEats and PostMates are dining out delivery services. Please respond only with the number of the category that best fits the expense. If you are more than kinda unsure which category it is, assume it belongs in misc. The name of the expense is: "
 
-client = OpenAI(api_key='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')
+client = OpenAI(api_key='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')
 
 
 categoryDict = {
@@ -35,7 +35,7 @@ categoryDict = {
 }
 
 totalPrices = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-totalRevenue = 0
+totalRevenue = 4765
 
 foodDelivery = [0,0.0]
 
@@ -50,7 +50,7 @@ def fillInDataFromCsv(fileName): #monthlyexpense is the planned
         nameOfPayment, price = entry[0], float(entry[1])
 
         if(price > 0): #Positive monetary value, 'income'
-            totalRevenue += price
+            # totalRevenue += price
             continue
 
         if ("ubereats" in nameOfPayment.lower()) or ("doordash" in nameOfPayment.lower()) or ("grubhub" in nameOfPayment.lower()) or ("gopuff" in nameOfPayment.lower()):
@@ -80,28 +80,24 @@ def fillInDataFromCsv(fileName): #monthlyexpense is the planned
         # print(nameOfPayment + " was assigned to " + categoryDict[number])
         totalPrices[number] -= float(price)
 
-# def getRevenueInfo():
-#     return totalRevenue
-
-# def getFoodDeliveryInfo():
-#     return foodDelivery
-
-# def getTopSpendingCategoryInfo():
-#     highestIndex = 0
-#     for i in range(len(totalPrices)):
-#         if totalPrices[i] > totalPrices[highestIndex]:
-#             highestIndex = i
-#     return [categoryDict[highestIndex],totalPrices[highestIndex]]
-
-# def getDebtInfo():
-#     return totalPrices[9]
-
-# def getDiningInfo():
-#     return totalPrices[3]
 fillInDataFromCsv("monthlyexpense.csv")
 State.revenueTotal = totalRevenue
 State.foodDelivery = foodDelivery
 State.debtPaidTotal = totalPrices[9]
+
+
+State.housing = totalPrices[0]
+State.utilities = totalPrices[1]
+State.groceries = totalPrices[2]
+State.diningOut = totalPrices[3]
+State.transportation = totalPrices[4]
+State.healthcare = totalPrices[5]
+State.insurance = totalPrices[6]
+State.personalSpending = totalPrices[7]
+State.savingsAndInvestments = totalPrices[8]
+State.subscriptionsAndMemberships = totalPrices[10]
+State.miscellaneous = totalPrices[11]
+State.totalExpenses = sum(totalPrices)
 
 highestIndex = 0
 for i in range(len(totalPrices)):
@@ -112,10 +108,11 @@ State.pricePrices = totalPrices
 
 
 
+
 slide_2 = Html("""
 <div style="width: 100%; height: 100%; position: relative; background: white">
     <div style="width: 1909px; height: 1231px; left: -235px; top: 0px; position: absolute; background: #2C909D">
-        <div style="width: 981px; height: 154px; left: 471px; top: 108px; position: absolute; color: white; font-size: 128px; font-family: Sansita; font-weight: 700; word-wrap: break-word">Finance Wrapped</div>
+        <div style="width: 981px; height: 154px; left: 471px; top: 108px; position: absolute; color: white; font-size: 128px; font-family: Sansita; font-weight: 700; word-wrap: break-word">Budget Wrapped</div>
         <div style="left: 591px; top: 303px; position: absolute; color: black; font-size: 48px; font-family: Sansita; font-weight: 700; word-wrap: break-word">Please upload your bank statement </div>
     </div>
     <div style="width: 464px; height: 442px; left: 492px; top: 395px; position: absolute; background: #2C909D; box-shadow: 0px 0px 48px rgba(24.54, 38.78, 89.25, 0.06)">
