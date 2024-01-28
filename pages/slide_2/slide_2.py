@@ -16,7 +16,7 @@ def loadCsvFile(state):
 #Begin shenanigans
 prompt = "YOU ARE ONLY TO RETURN AN INTEGER AS AN ANSWER. THIS IS URGENT. ONLY AN INTEGER. Hello ChatGPT, your task is to analyze a financial statement and categorize it into one of 13 predefined categories. The categories are: 0: Housing, 1: Utilities, 2: Groceries, 3: Dining Out, 4: Transportation, 5: Healthcare, 6: Insurance, 7: Personal Spending, 8: Savings and Investments, 9: Debt Payments, 10: Subscriptions and Memberships, 11: Miscellaneous. UberEats and PostMates are dining out delivery services. Please respond only with the number of the category that best fits the expense. If you are more than kinda unsure which category it is, assume it belongs in misc. The name of the expense is: "
 
-client = OpenAI(api_key='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')
+client = OpenAI(api_key='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')
 
 
 categoryDict = {

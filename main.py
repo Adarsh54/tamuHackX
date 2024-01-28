@@ -20,7 +20,8 @@ pages = {
     "REVENUE": slide_3,
 	"DINING": slide_4,
     "DEBT": slide_5,
-    "SUMMARY": slide_6
+    "SUMMARY": slide_6,
+    "BOT": slide_7
 }
 
 
@@ -49,5 +50,5 @@ if __name__ == "__main__":
     # Comment, remove or replace the previous lines with your own use case        #
     # #############################################################################
 
-    gui = Gui(pages=pages)
+    gui = Gui(pages=pages, css_file="main.css")
     tp.run(gui, rest, title="tamuHackX")
